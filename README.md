@@ -1,0 +1,5 @@
+## Read Me
+
+run_analysis.R contains a function that checks for data file in the working directory, if it's not found it downloads the dataset from predefined url: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+Note: the file size is about 60MB. 
+If the file exists (or after it is downloaded) the function extracts the file to a temporary file and reads the data from training and test files, as well as discription of the data. After extraction the temporary files are unlinked and the datasets are combined. The data is labelled using PascalCase format (capitalisation of each word in a variable), and combined into a independent tidy data set  with the average of each variable for each activity and each subject. The resulting dataset is then saved into a "result.txt" file.
